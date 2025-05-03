@@ -119,14 +119,14 @@ async def ask_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
 
 def main():
     # Option 1: Load the token from a YAML file
-    yaml_file = 'config.yaml'
-    with open(yaml_file, 'r') as file:
-        config = yaml.safe_load(file)
-    token = config['telegram']['token']
+    # yaml_file = 'config.yaml'
+    # with open(yaml_file, 'r') as file:
+    #     config = yaml.safe_load(file)
+    # token = config['telegram']['token']
 
     # Option 2: Load the token from a secrets file
-    # from secrets import TELEGRAM_TOKEN
-    # token = TELEGRAM_TOKEN
+    from secrets import TELEGRAM_TOKEN
+    token = TELEGRAM_TOKEN
 
     # Option 3: Load the token from an environment variable
     # token = os.getenv('TELEGRAM_TOKEN')
